@@ -16,10 +16,7 @@ enum WorkoutType {
 }
 
 
-class Workout {
-    
-    
-    
+struct Workout {
     
     var title: String
     var weightInPounds: Double?
@@ -27,17 +24,12 @@ class Workout {
     var workoutType: [WorkoutType]
     var reps: Int
     var sets: Int
+    var date: Date
+    
+    static let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+    static let archiveURL = documentDirectory.appendingPathComponent("workouts").appendingPathExtension("plist")
     
     
     
-    init?(weightInPounds: Double?, weightInKg: Double?, workoutType: [WorkoutType], reps: Int, sets: Int, title: String) {
-        self.weightInPounds = weightInPounds
-        self.weightInKg = weightInKg
-        self.workoutType = workoutType
-        self.sets = sets
-        self.reps = reps
-        self.title = title
-    }
-    
-    
+   
 }

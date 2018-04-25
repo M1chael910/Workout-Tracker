@@ -1,35 +1,18 @@
 //
-//  MainWorkoutView.swift
+//  LogWorkoutPageTableViewController.swift
 //  Workout Tracker
 //
-//  Created by Michael  Murphy on 4/22/18.
+//  Created by Michael  Murphy on 4/25/18.
 //  Copyright © 2018 Michael  Murphy. All rights reserved.
 //
 
 import UIKit
 
+class LogWorkoutPage: UITableViewController {
 
-
-
-class MainWorkoutView: UITableViewController {
-
-
-    
-    
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.dataSource = self
-        tableView.delegate = self
-        navigationItem.leftBarButtonItem = editButtonItem
-    }
-    
-    
-    
-    @IBAction func unwindToMain(Segue: UIStoryboardSegue) {
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,42 +23,34 @@ class MainWorkoutView: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        // #warning Incomplete implementation, return the number of sections
+        return 0
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        // #warning Incomplete implementation, return the number of rows
+        return 0
     }
 
-    
-    
-    
+    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cellId", for: indexPath)
-        cell.backgroundColor = .red
-        cell.showsReorderControl = true
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+
+        // Configure the cell...
 
         return cell
     }
-    
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
-    }
-    
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "MainSegueId", sender: nil)
-    }
+    */
 
-    
+    /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
     }
- 
+    */
 
-    
+    /*
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
@@ -85,7 +60,7 @@ class MainWorkoutView: UITableViewController {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    
+    */
 
     /*
     // Override to support rearranging the table view.
@@ -94,13 +69,13 @@ class MainWorkoutView: UITableViewController {
     }
     */
 
-    
+    /*
     // Override to support conditional rearranging of the table view.
     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the item to be re-orderable.
         return true
     }
- 
+    */
 
     /*
     // MARK: - Navigation
