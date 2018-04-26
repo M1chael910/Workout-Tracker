@@ -29,7 +29,11 @@ struct Workout {
     static let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
     static let archiveURL = documentDirectory.appendingPathComponent("workouts").appendingPathExtension("plist")
     
-    
+    static let dateFormatter = {
+        let dateManager = DateFormatter()
+        dateManager.dateStyle = .short
+        dateManager.timeStyle = .short
+    }()
     
    
 }

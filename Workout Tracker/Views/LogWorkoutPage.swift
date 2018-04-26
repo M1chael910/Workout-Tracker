@@ -13,11 +13,7 @@ class LogWorkoutPage: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
     }
     
     // MARK: - Table view data source
@@ -27,7 +23,7 @@ class LogWorkoutPage: UITableViewController {
     
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
-        return false
+        return true
     }
     
     
