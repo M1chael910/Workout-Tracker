@@ -10,11 +10,19 @@ import UIKit
 
 class LogWorkoutPage: UITableViewController {
     
+    @IBOutlet weak var titleTextField: UITextField!
+    
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
+    
+    
+    
     
     // MARK: - Table view data source
     
