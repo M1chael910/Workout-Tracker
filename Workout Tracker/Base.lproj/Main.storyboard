@@ -28,7 +28,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="fbo-fZ-GE0">
-                                            <rect key="frame" x="115.66666666666666" y="39" width="183.33333333333334" height="20.333333333333329"/>
+                                            <rect key="frame" x="115.66666666666664" y="39" width="183.33333333333337" height="20.333333333333329"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xxz-gJ-fvn">
                                                     <rect key="frame" x="0.0" y="0.0" width="41.666666666666664" height="20.333333333333332"/>
@@ -65,15 +65,12 @@
                         <barButtonItem key="leftBarButtonItem" title="Done" id="3Jc-Cy-TLt"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="tpC-r6-2rY">
                             <connections>
-                                <segue destination="eFL-1J-fNQ" kind="popoverPresentation" popoverAnchorBarButtonItem="tpC-r6-2rY" id="Yes-me-0yk">
-                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                </segue>
+                                <segue destination="ZXE-VG-VBh" kind="show" id="pll-Q9-dvh"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="eFL-1J-fNQ" kind="show" identifier="MainSegueId" id="mzI-5U-Shq"/>
-                        <segue destination="ZXE-VG-VBh" kind="show" id="ukj-Z2-FkU"/>
+                        <segue destination="ZXE-VG-VBh" kind="show" identifier="addWorkout" id="Fqd-LH-LBK"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P8y-TB-YdA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -130,18 +127,18 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0eV-HW-nAg">
-                                                    <rect key="frame" x="108" y="12" width="42" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Itu-C9-vwR">
                                                     <rect key="frame" x="348" y="35" width="46" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="Button"/>
                                                 </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0eV-HW-nAg">
+                                                    <rect key="frame" x="60" y="11" width="42" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="zAa-bi-MTn" firstAttribute="top" secondItem="N8J-A4-O09" secondAttribute="top" id="12d-ha-dZM"/>
@@ -155,24 +152,24 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="Enter The Amount of weight Below" id="Fgj-9z-blE">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="shj-vH-Jcu">
-                                        <rect key="frame" x="0.0" y="317.33333333333337" width="414" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="50" id="shj-vH-Jcu">
+                                        <rect key="frame" x="0.0" y="317.33333333333337" width="414" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="shj-vH-Jcu" id="flu-SU-gKf">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="49.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="hxk-0j-bdD">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="49.666666666666664"/>
                                                     <subviews>
                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qA5-dr-qe5">
-                                                            <rect key="frame" x="0.0" y="7" width="310.66666666666669" height="30"/>
+                                                            <rect key="frame" x="0.0" y="10" width="310.66666666666669" height="30"/>
                                                             <nil key="textColor"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits"/>
                                                         </textField>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jIW-CH-lUS">
-                                                            <rect key="frame" x="310.66666666666669" y="7" width="103.33333333333331" height="30"/>
+                                                            <rect key="frame" x="310.66666666666669" y="10" width="103.33333333333331" height="30"/>
                                                             <state key="normal" title="Kg or Lbs?"/>
                                                         </button>
                                                     </subviews>
@@ -196,7 +193,7 @@
                             <tableViewSection headerTitle="Enter Amount of sets below" id="joz-SY-JYJ">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="TZl-dA-fA2">
-                                        <rect key="frame" x="0.0" y="417.33333333333337" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="423.33333333333337" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TZl-dA-fA2" id="vy0-hK-FRB">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
@@ -204,6 +201,9 @@
                                             <subviews>
                                                 <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="6" minValue="1" maxValue="11" translatesAutoresizingMaskIntoConstraints="NO" id="grz-MW-x9I">
                                                     <rect key="frame" x="18" y="11" width="378" height="23"/>
+                                                    <connections>
+                                                        <action selector="amountOfSetsSlider:" destination="ZXE-VG-VBh" eventType="valueChanged" id="G1P-Es-8ZV"/>
+                                                    </connections>
                                                 </slider>
                                             </subviews>
                                             <constraints>
@@ -219,7 +219,7 @@
                             <tableViewSection headerTitle="Enter the number of reps per set below" id="7uR-pw-Fyb">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Wpj-7Y-Hg7">
-                                        <rect key="frame" x="0.0" y="517.33333333333337" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="523.33333333333337" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Wpj-7Y-Hg7" id="vIQ-oL-Yd3">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
@@ -227,6 +227,9 @@
                                             <subviews>
                                                 <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="6" minValue="1" maxValue="11" translatesAutoresizingMaskIntoConstraints="NO" id="ekh-ov-p8o">
                                                     <rect key="frame" x="18" y="11" width="378" height="23"/>
+                                                    <connections>
+                                                        <action selector="amountOfRepsPerSetSlider:" destination="ZXE-VG-VBh" eventType="valueChanged" id="ZgF-8c-mGU"/>
+                                                    </connections>
                                                 </slider>
                                             </subviews>
                                             <constraints>
@@ -242,7 +245,7 @@
                             <tableViewSection headerTitle="Enter The Date Below" id="IE5-jR-XfU">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="150" id="Y8B-3V-VX8">
-                                        <rect key="frame" x="0.0" y="617.33333333333337" width="414" height="150"/>
+                                        <rect key="frame" x="0.0" y="623.33333333333337" width="414" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Y8B-3V-VX8" id="NDv-Ve-Msd">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="149.66666666666666"/>
@@ -286,6 +289,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="amountOfRepsPerSetSlider" destination="ekh-ov-p8o" id="bhf-8R-GvP"/>
+                        <outlet property="amountOfSetsSlider" destination="grz-MW-x9I" id="Dbh-ba-2za"/>
+                        <outlet property="amountOfWeightTextfield" destination="qA5-dr-qe5" id="iuk-pL-mD1"/>
+                        <outlet property="datePicker" destination="V1S-9G-tvc" id="5P1-Wq-pY2"/>
                         <outlet property="titleTextField" destination="Ozf-eO-wSj" id="41A-R6-W3g"/>
                     </connections>
                 </tableViewController>
@@ -332,7 +339,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="mzI-5U-Shq"/>
-        <segue reference="gHi-Re-83a"/>
+        <segue reference="Fqd-LH-LBK"/>
     </inferredMetricsTieBreakers>
 </document>

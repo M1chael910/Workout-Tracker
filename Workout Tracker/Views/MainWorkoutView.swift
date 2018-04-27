@@ -8,7 +8,7 @@
 
 import UIKit
 
-var workouts: [Workout]!
+var workouts: [Workout] = []
 
 
 class MainWorkoutView: UITableViewController {
@@ -57,10 +57,6 @@ class MainWorkoutView: UITableViewController {
     }
     
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-    }
-
     
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -94,13 +90,27 @@ class MainWorkoutView: UITableViewController {
         
         return true
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "addWorkout", sender: nil)
+    }
  
 
     
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {x
+        guard segue.identifier == "addWorkout" else {return}
+        let addWorkoutView = segue.destination
+            as! LogWorkoutPage
+        
+        
+    
+        
+        
+       
+        
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }

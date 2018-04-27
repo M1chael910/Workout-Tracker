@@ -9,6 +9,8 @@
 import Foundation
 
 
+
+
 enum WorkoutType {
     case deadlift
     case squat

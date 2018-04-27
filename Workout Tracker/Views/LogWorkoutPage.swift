@@ -10,14 +10,30 @@ import UIKit
 
 class LogWorkoutPage: UITableViewController {
     
+    @IBOutlet weak var amountOfWeightTextfield: UITextField!
+    
+    @IBOutlet weak var amountOfSetsSlider: UISlider!
+    
+    @IBOutlet weak var datePicker: UIDatePicker!
+    
     @IBOutlet weak var titleTextField: UITextField!
     
+    @IBOutlet weak var amountOfRepsPerSetSlider: UISlider!
     
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    }
+    
+    
+    @IBAction func amountOfSetsSlider(_ sender: UISlider) {
+        
+    }
+    
+    @IBAction func amountOfRepsPerSetSlider(_ sender: UISlider) {
         
     }
     
