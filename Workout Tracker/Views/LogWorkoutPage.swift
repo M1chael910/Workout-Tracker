@@ -12,6 +12,9 @@ class LogWorkoutPage: UITableViewController {
     
     @IBOutlet weak var amountOfWeightTextfield: UITextField!
     
+    @IBOutlet weak var numberOfSetsLabel: UILabel!
+    
+    @IBOutlet weak var numberOfRepsPerSetLabel: UILabel!
     @IBOutlet weak var amountOfSetsSlider: UISlider!
     
     @IBOutlet weak var datePicker: UIDatePicker!
@@ -30,11 +33,16 @@ class LogWorkoutPage: UITableViewController {
     
     
     @IBAction func amountOfSetsSlider(_ sender: UISlider) {
+        let value = Int(sender.value)
+        numberOfSetsLabel.text = String(value)
+        
+        
         
     }
     
     @IBAction func amountOfRepsPerSetSlider(_ sender: UISlider) {
-        
+        let value = Int(sender.value)
+        numberOfRepsPerSetLabel.text = String(value)
     }
     
     
