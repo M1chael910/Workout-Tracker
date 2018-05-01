@@ -63,11 +63,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="Tw0-Mk-42G">
                         <barButtonItem key="leftBarButtonItem" title="Done" id="3Jc-Cy-TLt"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="tpC-r6-2rY">
-                            <connections>
-                                <segue destination="ZXE-VG-VBh" kind="show" id="pll-Q9-dvh"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="tpC-r6-2rY"/>
                     </navigationItem>
                     <connections>
                         <segue destination="ZXE-VG-VBh" kind="show" identifier="addWorkout" id="Fqd-LH-LBK"/>
@@ -272,7 +268,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="V1S-9G-tvc">
-                                                    <rect key="frame" x="20" y="11" width="374" height="128"/>
+                                                    <rect key="frame" x="8" y="8" width="398" height="133.66666666666666"/>
                                                     <date key="date" timeIntervalSinceReferenceDate="546395382.36175799">
                                                         <!--2018-04-26 00:29:42 +0000-->
                                                     </date>

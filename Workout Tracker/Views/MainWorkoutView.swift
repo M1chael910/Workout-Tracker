@@ -106,6 +106,8 @@ class MainWorkoutView: UITableViewController {
             as! LogWorkoutPage
         
         
+        
+        
     
         
         
