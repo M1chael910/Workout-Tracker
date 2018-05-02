@@ -63,10 +63,16 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="Tw0-Mk-42G">
                         <barButtonItem key="leftBarButtonItem" title="Done" id="3Jc-Cy-TLt"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="tpC-r6-2rY"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="tpC-r6-2rY">
+                            <connections>
+                                <segue destination="eFL-1J-fNQ" kind="popoverPresentation" popoverAnchorBarButtonItem="tpC-r6-2rY" id="z1O-R6-kik">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="ZXE-VG-VBh" kind="show" identifier="addWorkout" id="Fqd-LH-LBK"/>
+                        <segue destination="ZXE-VG-VBh" kind="show" identifier="addWorkout" id="pfb-Hq-ZXf"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P8y-TB-YdA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -85,7 +91,7 @@
                             <tableViewSection headerTitle="Enter The Title of Your workout below" id="wcA-o9-6Rl">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="50" id="YHw-9H-2yF">
-                                        <rect key="frame" x="0.0" y="55.333333333333336" width="414" height="50"/>
+                                        <rect key="frame" x="0.0" y="55.333333333333343" width="414" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YHw-9H-2yF" id="6h9-p3-TSl">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="49.666666666666664"/>
@@ -167,6 +173,9 @@
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jIW-CH-lUS">
                                                             <rect key="frame" x="310.66666666666669" y="10" width="103.33333333333331" height="30"/>
                                                             <state key="normal" title="Kg or Lbs?"/>
+                                                            <connections>
+                                                                <action selector="whenKgOrLbsBtnPressed:" destination="ZXE-VG-VBh" eventType="touchUpInside" id="RG4-8c-2ng"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <constraints>
@@ -313,6 +322,7 @@
                         <outlet property="amountOfSetsSlider" destination="grz-MW-x9I" id="Dbh-ba-2za"/>
                         <outlet property="amountOfWeightTextfield" destination="qA5-dr-qe5" id="iuk-pL-mD1"/>
                         <outlet property="datePicker" destination="V1S-9G-tvc" id="5P1-Wq-pY2"/>
+                        <outlet property="kgOrLbsBtn" destination="jIW-CH-lUS" id="xUB-2i-jYs"/>
                         <outlet property="numberOfRepsPerSetLabel" destination="ElW-Hm-WiI" id="n4o-vA-uvS"/>
                         <outlet property="numberOfSetsLabel" destination="tcn-4P-8I6" id="yV7-7l-jd3"/>
                         <outlet property="titleTextField" destination="Ozf-eO-wSj" id="41A-R6-W3g"/>
@@ -361,6 +371,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Fqd-LH-LBK"/>
+        <segue reference="pfb-Hq-ZXf"/>
     </inferredMetricsTieBreakers>
 </document>

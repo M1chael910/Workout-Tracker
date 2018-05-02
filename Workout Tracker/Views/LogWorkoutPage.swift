@@ -23,12 +23,21 @@ class LogWorkoutPage: UITableViewController {
     
     @IBOutlet weak var amountOfRepsPerSetSlider: UISlider!
     
+
+    @IBOutlet weak var kgOrLbsBtn: UIButton!
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+    }
+    
+    
+    func createKgOrLbsAlert() {
+        let kgOrLbsAlert = UIAlertController(title: "Kg's or Lb's", message: "Choose Unit of measurment for weight", preferredStyle: .actionSheet)
+        kgOrLbsAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        self.present(kgOrLbsAlert, animated: true, completion: nil)
     }
     
     
@@ -56,6 +65,9 @@ class LogWorkoutPage: UITableViewController {
     }
     
     
+    @IBAction func whenKgOrLbsBtnPressed(_ sender: UIButton) {
+        createKgOrLbsAlert()
+    }
     
     
     

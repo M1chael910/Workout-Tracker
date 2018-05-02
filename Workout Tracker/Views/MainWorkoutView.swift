@@ -104,6 +104,7 @@ class MainWorkoutView: UITableViewController {
         guard segue.identifier == "addWorkout" else {return}
         let addWorkoutView = segue.destination
             as! LogWorkoutPage
+        addWorkoutView.numberOfRepsPerSetLabel.text = "Hello"
         
         
         
