@@ -36,6 +36,8 @@ class LogWorkoutPage: UITableViewController {
     
     func createKgOrLbsAlert() {
         let kgOrLbsAlert = UIAlertController(title: "Kg's or Lb's", message: "Choose Unit of measurment for weight", preferredStyle: .actionSheet)
+        kgOrLbsAlert.addAction(UIAlertAction(title: "lbs", style: .cancel, handler: nil))
+        kgOrLbsAlert.addAction(UIAlertAction(title: "kg", style: .cancel, handler: nil))
         kgOrLbsAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         self.present(kgOrLbsAlert, animated: true, completion: nil)
     }
