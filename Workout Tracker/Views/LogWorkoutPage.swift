@@ -36,12 +36,19 @@ class LogWorkoutPage: UITableViewController {
     
     func createKgOrLbsAlert() {
         let kgOrLbsAlert = UIAlertController(title: "Kg's or Lb's", message: "Choose Unit of measurment for weight", preferredStyle: .actionSheet)
-        kgOrLbsAlert.addAction(UIAlertAction(title: "lbs", style: .cancel, handler: nil))
-        kgOrLbsAlert.addAction(UIAlertAction(title: "kg", style: .cancel, handler: nil))
+        kgOrLbsAlert.addAction(UIAlertAction(title: "lbs", style: .default, handler: changeTitleOfBtnToLbs))
+        kgOrLbsAlert.addAction(UIAlertAction(title: "kg", style: .default, handler: changeTitleOfBtnToKgs))
         kgOrLbsAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         self.present(kgOrLbsAlert, animated: true, completion: nil)
     }
     
+    
+    func changeTitleOfBtnToKgs(action: UIAlertAction) {
+        kgOrLbsBtn.titleLabel?.text = "Kg"
+    }
+    func changeTitleOfBtnToLbs(action: UIAlertAction) {
+        kgOrLbsBtn.titleLabel?.text = "Lbs"
+    }
     
     @IBAction func amountOfSetsSlider(_ sender: UISlider) {
         let value = Int(sender.value)
